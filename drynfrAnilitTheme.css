@@ -1,4 +1,5 @@
-/* Customized by drynfr (3 Jan, 2025)
+/*Customized by drynfr (3 Jan, 2025)
+
 Credit to @nutellaa & @kdy for css inspiration
 */
 
@@ -11,6 +12,100 @@ Credit to @nutellaa & @kdy for css inspiration
         to https://anilist.co/user/cakes/
         for pointing out a few things and the hover effect on the navbar
 */
+
+/* Settings */
+:root,
+.site-theme-dark,
+.site-theme-contrast {
+    /* General Settings */
+    --hokaze-br: 10px;
+    /* Global Border Radius */
+    --hokaze-pv: 30px;
+    /* Vertical Content Padding */
+    --hokaze-ph: 30px;
+    /* Horizontal Content Padding */
+    --hokaze-bt: 0.3;
+    /* Content Background Transparency*/
+    --hokaze-nr: 30px;
+    /* Navbar Border Radius */
+    --hokaze-nl: 80%;
+    /* Navbar Length */
+    --hokaze-sb: 4px;
+    /* Scrollbar Width */
+    --hokaze-vo: 0.7;
+    /* Opacity For Various Elements */
+    --hokaze-vs: 0.975;
+    /* Scale For Various Elements */
+    --hokaze-vb: 2px;
+    /* Various Avatar Border Thickness */
+    --hokaze-sr: 4px;
+    /* Social Page Border Thickness */
+    --hokaze-fr: 30px;
+    /* Footer Border Radius */
+    --hokaze-fl: 85%;
+    /* Footer Length */
+    --hokaze-bl: 4px;
+    /* Background 'Window' Blur Amount */
+    --hokaze-rs: 5.025;
+    /* Scaling For Load More Button And Activity Input */
+    --hokaze-gs: var(--color-blue);
+    /* Stats Wrap Gradient Start Color */
+    --hokaze-ge: var(--color-blue-dim);
+    /* Stats Wrap Gradient End Color */
+    --hokaze-vt: all 0.5s ease-in-out;
+    /* Transition For Various Elements */
+    --hokaze-li: initial;
+    /* Anilist Logo Source */
+    --hokaze-lb: 0px;
+    /* Anilist Logo Border Thickness */
+    --hokaze-lr: 0px;
+    /* Anilist Logo Border Radius */
+    --hokaze-ls: 1.2;
+    /* Anilist Logo Hover Scaling */
+    --hokaze-bs: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+        /* Box Shadow */
+        rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px,
+        rgba(0, 0, 0, 0.07) 0px 8px 16px;
+    --hokaze-ns: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+        /* Box Shadow For Navbar */
+        rgba(0, 0, 0, 0.07) 0px 2px 4px;
+
+
+/* Quick Maths - !DON'T TOUCH! */
+    --hokaze-brt: var(--hokaze-br) var(--hokaze-br) 0 0;
+    --hokaze-brb: 0 0 var(--hokaze-br) var(--hokaze-br);
+    --hokaze-bra: var(--hokaze-br) var(--hokaze-br) var(--hokaze-br) var(--hokaze-br);
+    --hokaze-pdh: var(--hokaze-pv) var(--hokaze-ph);
+    --hokaze-maw: calc(1520px - 2 * (100px - var(--hokaze-ph)));
+    --hokaze-abs: var(--hokaze-ab) solid rgb(var(--color-foreground));
+    --hokaze-nbr: 0 0 var(--hokaze-nr) var(--hokaze-nr);
+    --hokaze-nbl: calc((100% - var(--hokaze-nl)) / 2);
+    --hokaze-fbr: var(--hokaze-fr) var(--hokaze-fr) 0 0;
+    --hokaze-fbl: calc((100% - var(--hokaze-fl)) / 2);
+    --hokaze-bch: calc(330px - 75px);
+    --hokaze-bcc: calc(var(--hokaze-bch) / 2);
+    --hokaze-bctc: calc(var(--hokaze-bcc) - 36px / 2);
+    --hokaze-vab: var(--hokaze-vb) solid rgb(var(--color-background));
+    --hokaze-sab: var(--hokaze-sr) solid rgb(var(--color-background));
+    --hokaze-lob: var(--hokaze-lb) solid rgb(var(--color-blue));
+}
+
+.nav:hover {
+    top: 0px !important;
+}
+.links>.link:hover {
+    color: rgb(var(--color-blue));
+}
+.nav>.link:hover::after {
+    left: 0;
+    width: 100%;
+    background: rgb(var(--color-blue));
+}
+.history-day:hover {
+    transform: scale(1.2);
+}
+
 
 @media screen and (min-width: 761px) {
     .activity-feed .activity-entry,
@@ -120,7 +215,7 @@ Credit to @nutellaa & @kdy for css inspiration
     background-image: url(https://i.ibb.co.com/P6mm8CJ/kyaru-walk.gif);
     background-position: 30px bottom;
     background-repeat: no-repeat;
-    background-size: 100px;
+    background-size: 140px;
   }
   #app .tooltip,
   #nav:not(.transparent),
@@ -177,6 +272,13 @@ Credit to @nutellaa & @kdy for css inspiration
   .highlight .icon {
     color: rgb(159,173,189) !important;
   }
+  .highlights {
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .activity-edit .input.el-textarea textarea {
+  background-color: rgba(0, 0, 0, 0.8)
+  }
   .stats-wrap .label,
   .line-chart-wrap .point-label {
     color: #fff !important;
@@ -209,9 +311,12 @@ Credit to @nutellaa & @kdy for css inspiration
      }
 
 .banner .shadow {
-    background: none !important; /* Disables the background */
+    background: none !important;
 }
 
+.activity-edit .input.el-textarea textarea {
+        background: none !important;
+  }
 
   .header-wrap .hohDownload {
     display: none !important;
@@ -315,6 +420,7 @@ Credit to @nutellaa & @kdy for css inspiration
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 230px;
+    border-radius: 5px;
   }
   .overview .favourite.studio::after {
     display: none !important;
@@ -373,9 +479,7 @@ Credit to @nutellaa & @kdy for css inspiration
   .markdown-spoiler span {
     background: rgb(11,22,34) !important;
   }
-  .history-day.lv-0 {
-    background: transparent !important;
-  }
+ 
   .overview .favourites > .favourites-wrap {
     column-gap: 0px !important;
     padding: 10px 5px !important;
@@ -451,10 +555,18 @@ Credit to @nutellaa & @kdy for css inspiration
   }
   @media (max-width: 1040px) {
     #app > .wrap .footer {
-      background-blend-mode: soft-light;
       background-position: right bottom;
       background-size: contain;
+      background-blend-mode: normal !important;
     }
+
+    .home .activity-entry > .wrap > .actions,
+    .user .activity-entry > .wrap > .actions {
+        width: auto !important; /* Resets to the default width */
+        display: block !important; /* Resets to block layout (default) */
+    }
+
+
   }
   @media (min-width: 1041px) and (max-width: 1540px) {
     .nav.container {
