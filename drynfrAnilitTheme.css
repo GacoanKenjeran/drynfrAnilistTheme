@@ -1,5 +1,17 @@
-/* Picked those from @nutellaa & @kdy */
-/* But only for desktop view */
+/* Customized by drynfr (3 Jan, 2025)
+Credit to @nutellaa & @kdy for css inspiration
+*/
+
+/*
+    Hokaze Theme - Version 1.5.3
+        by https://anilist.co/user/Anzu/
+        at https://github.com/AnzuFTNW
+
+    Special Thanks
+        to https://anilist.co/user/cakes/
+        for pointing out a few things and the hover effect on the navbar
+*/
+
 @media screen and (min-width: 761px) {
     .activity-feed .activity-entry,
     .activity-feed .activity-replies .reply {
